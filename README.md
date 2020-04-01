@@ -2,5 +2,6 @@
 
 ## Cloudformation Deploy
 ```
-aws cloudformation deploy --template-file ./ssm.yaml  --stack-name ssmparameter --parameter-overrides Name=param1 value=Value1 
+python3 ssm.py
+aws cloudformation deploy --template-file ./ssm.yaml  --stack-name ssmparameter --parameter-overrides Name=param1 value=Value1 --no-fail-on-empty-changeset 
 ```
