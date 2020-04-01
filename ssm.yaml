@@ -1,0 +1,14 @@
+Parameters:
+  Name:
+    Description: Name of the ssm parameter
+    Type: String
+  Value:
+    Description: Value of the ssm parameter
+    Type: String
+Resources:
+  ssmparameter:
+    Properties:
+      Name: !Ref 'Name'
+      Type: String
+      Value: !Ref 'Value'
+    Type: AWS::SSM::Parameter
